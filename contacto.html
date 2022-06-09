@@ -13,7 +13,7 @@
     <header>
         <div class="caja">
             <h1>
-                <img src="img/imagenes/logo.png">
+                <img src="img/imagenes/logo.png" alt="Logo de la barberia Alura">
             </h1>
             <nav>
                 <ul>
@@ -28,46 +28,79 @@
     <main>
         <form>
             <label for="nombreapellido">Nombre y Apellido</label>
-            <input type="text" id="nombreapellido">
+            <input type="text" id="nombreapellido" class="input-padron" required>
 
             <label for="correoelectronico">Correo Electronico</label>
-            <input type="text" id="correoelectronico">
+            <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@domino.com">
 
             <label for="telefono">Telefono</label>
-            <input type="text" id="telefono">
+            <input type="tel" id="telefono" class="input-padron" required placeholder="(xx) xxxx xxxx">
 
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" cols="70" rows="10"></textarea>
+            <textarea id="mensaje" cols="70" rows="10" class="input-padron" required></textarea>
 
+            <fieldset>
+                <legend>¿Como le gustaria que lo contactemos?</legend>
 
+                <label for="radio-email"><input type="radio" id="radio-email" name="contacto" value="email">
+                    Email</label>
 
-            <div>
-                <p>Como le gustaria que lo contactemos?</p>
+                <label for="radio-telefono"><input type="radio" id="radio-telefono" name="contacto" value="telefono">
+                    Telefono</label>
 
-                <label for="radio-email">Email</label>
-                <input type="radio" id="radio-email" name="contacto" value="email">
+                <label for="radio-whatsapp"><input type="radio" id="radio-whatsapp" checked name="contacto"
+                        value="whatsapp">
+                    Whatsapp</label>
 
-                <label for="radio-telefono">Telefono</label>
-                <input type="radio" id="radio-telefono" name="contacto" value="telefono">
+            </fieldset>
 
-                <label for="radio-whatsapp">Whatsapp</label>
-                <input type="radio" id="radio-whatsapp" name="contacto" value="whatsapp">
+            <fieldset>
+                <legend>¿En cual horario prefiere ser atendido?</legend>
+                <select>
+                    <option>Mañana</option>
+                    <option>Tarde</option>
+                    <option>Noche</option>
+                </select>
+            </fieldset>
 
-            </div>
-
-
-            <label>
-                <input type="checkbox">
+            <label class="checkbox">
+                <input type="checkbox" checked>
                 Le gustaria recibir novedades de la Barberia
             </label>
 
-            <input type="submit" value="Enviar Formulario">
+
+
+            <input type="submit" value="Enviar Formulario" class="enviar">
 
         </form>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Dia</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunes</td>
+                    <td>08h - 20h</td>
+                </tr>
+                <tr>
+                    <td>Miercoles</td>
+                    <td>08h - 20h</td>
+                </tr>
+                <tr>
+                    <td>Dia</td>
+                    <td>08h - 20h</td>
+                </tr>
+            </tbody>
+        </table>
+
     </main>
 
     <footer>
-        <img src="img/imagenes/logo-blanco.png">
+        <img src="img/imagenes/logo-blanco.png" alt="Logo de la barberia Alura">
         <p class="copyright">&copy Copyright Barberia Alura 2022</p>
     </footer>
 
