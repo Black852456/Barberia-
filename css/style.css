@@ -186,6 +186,11 @@ img ~ p{
     background:green;
 }
 
+//TENER EN CUENTA AL MANEJAR POSIBLE DIMENSIONES O 
+COMPORTAMINETOS EN LOS ESTILOS
+.img{
+    width:call(20%-70px);
+}
 
 
 */
@@ -195,6 +200,10 @@ img ~ p{
     font-size: 2em;
     margin: 0 0 1em;
     clear: left;
+    /*color: rgba(0, 0, 0, 0.3);*/
+    /*
+    SOMBRA PARA TEXTOS
+    text-shadow: 2px 2px red;*/
 }
 
 
@@ -237,6 +246,12 @@ p::first-line {
 
 .imagen-diferenciales {
     width: 60%;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 15px #000000;
+}
+
+.imagen-diferenciales:hover {
+    opacity: 0.3;
 }
 
 .utensilios {
@@ -291,4 +306,24 @@ p::first-line {
 
 .items:first-child {
     font-weight: bold;
+}
+
+@media screen and (max-width:480px) {
+    h1 {
+        text-align: center;
+    }
+    nav {
+        position: static;
+    }
+    .caja,
+    .principal,
+    .mapa-contenido,
+    .contenido-diferenciales,
+    .video {
+        width: auto;
+    }
+    .lista-diferenciales,
+    .imagen-diferenciales {
+        width: 100%;
+    }
 }
